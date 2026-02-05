@@ -1,0 +1,86 @@
+[
+    {
+        "id": "air-max-1",
+        "name": "Nike Air Max 1",
+        "price": 129.99,
+        "category": "Running",
+        "colors": ["black", "white", "red"],
+        "description": "The iconic shoe that started it all. Revolutionary Air cushioning.",
+        "features": ["Air cushioning", "Breathable mesh", "Rubber outsole"],
+        "images": [
+            "/images/products/air-max-1-1.png",
+            "/images/products/air-max-1-2.jpg",
+            "/images/products/air-max-1-3.jpg"
+        ]
+    },
+    {
+        "id": "air-jordan-1",
+        "name": "Air Jordan 1 Retro High",
+        "price": 179.99,
+        "category": "Basketball",
+        "colors": ["black", "red", "white"],
+        "description": "The shoe that started the Jordan legacy. Timeless style.",
+        "features": ["Leather upper", "Nike Air cushioning", "Iconic design"],
+        "images": [
+            "/images/products/jordan-1-1.png",
+            "/images/products/jordan-1-2.jpg",
+            "/images/products/jordan-1-3.jpg"
+        ]
+    },
+    {
+        "id": "air-force-1",
+        "name": "Nike Air Force 1 '07",
+        "price": 109.99,
+        "category": "Lifestyle",
+        "colors": ["white", "black", "blue"],
+        "description": "The classic. The one. The AF1.",
+        "features": ["Leather upper", "Perforated toe", "Pivot circle outsole"],
+        "images": [
+            "/images/products/af1-1.png",
+            "/images/products/af1-2.jpg",
+            "/images/products/af1-3.jpg"
+        ]
+    },
+    {
+        "id": "dunk-low",
+        "name": "Nike Dunk Low Retro",
+        "price": 119.99,
+        "category": "Skateboarding",
+        "colors": ["white", "black", "green"],
+        "description": "Skateboard heritage meets modern style.",
+        "features": ["Leather upper", "Foam midsole", "Rubber outsole"],
+        "images": [
+            "/images/products/dunk-1.jpg",
+            "/images/products/dunk-2.jpg",
+            "/images/products/dunk-3.jpg"
+        ]
+    },
+    {
+        "id": "air-max-97",
+        "name": "Nike Air Max 97",
+        "price": 169.99,
+        "category": "Running",
+        "colors": ["silver", "black", "gold"],
+        "description": "Inspired by Japanese bullet trains. Full-length Air unit.",
+        "features": ["Full-length Air", "Synthetic upper", "3M reflective details"],
+        "images": [
+            "/images/products/air-max-97-1.jpg",
+            "/images/products/air-max-97-2.jpg",
+            "/images/products/air-max-97-3.jpg"
+        ]
+    },
+    {
+        "id": "metcon-8",
+        "name": "Nike Metcon 8",
+        "price": 139.99,
+        "category": "Training",
+        "colors": ["black", "red", "blue"],
+        "description": "Designed for the toughest workouts. Unmatched stability.",
+        "features": ["Dual-density foam", "Rope wrap", "Hyperlift plate"],
+        "images": [
+            "/images/products/metcon-1.jpg",
+            "/images/products/metcon-2.jpg",
+            "/images/products/metcon-3.jpg"
+        ]
+    }
+]

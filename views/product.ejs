@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">NIKE</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <a href="/" class="nav-logo">NIKE</a>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main style="padding-top: 80px;">
+        <section class="product-detail">
+            <div class="product-images">
+                <img src="<%= product.images[0] || '/images/placeholder.png' %>" alt="<%= product.name %>" class="main-image">
+                <div class="thumbnail-images">
+                    <% product.images.forEach((image, index) => { %>
+                        <img src="<%= image || '/images/placeholder.png' %>" alt="<%= product.name %> - View <%= index + 1 %>" 
+                             class="thumbnail <%= index === 0 ? 'active' : '' %>">
+                    <% }); %>
+                </div>
+            </div>
+            
+            <div class="product-details">
+                <h1><%= product.name %></h1>
+                <p class="product-price-large">$<%= product.price %></p>
+                
+                <div class="product-description">
+                    <p><%= product.description %></p>
+                    
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Features</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <% product.features.forEach(feature => { %>
+                            <li style="margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--nike-accent);">✓</span>
+                                <%= feature %>
+                            </li>
+                        <% }); %>
+                    </ul>
+                </div>
+                
+                <div class="size-selector">
+                    <h3 style="margin-bottom: 1rem;">Select Size</h3>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <% const sizes = [7, 8, 9, 10, 11, 12]; %>
+                        <% sizes.forEach(size => { %>
+                            <div class="size-option"><%= size %></div>
+                        <% }); %>
+                    </div>
+                </div>
+                
+                <button class="add-to-cart">ADD TO CART</button>
+                
+                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--nike-light-gray);">
+                    <h3>Product Details</h3>
+                    <p style="margin-top: 1rem; color: var(--nike-gray);">
+                        This premium product features the latest Nike technology for maximum comfort and performance.
+                        Available in multiple color options.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>NIKE</h3>
+                <p>Bring inspiration and innovation to every athlete* in the world.</p>
+            </div>
+            <div class="footer-section">
+                <h3>More Products</h3>
+                <ul class="footer-links">
+                    <li><a href="/products?category=running">Running Shoes</a></li>
+                    <li><a href="/products?category=basketball">Basketball Shoes</a></li>
+                    <li><a href="/products?category=training">Training Gear</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nike, Inc. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">NIKE</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <a href="/" class="nav-logo">NIKE</a>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main style="padding-top: 80px;">
+        <section class="products-section">
+            <h1 class="section-title">ALL PRODUCTS</h1>
+            
+            <!-- Filter -->
+            <div class="filters">
+                <button class="filter-btn <%= currentCategory === 'all' ? 'active' : '' %>" data-filter="all">All</button>
+                <button class="filter-btn <%= currentCategory === 'running' ? 'active' : '' %>" data-filter="running">Running</button>
+                <button class="filter-btn <%= currentCategory === 'basketball' ? 'active' : '' %>" data-filter="basketball">Basketball</button>
+                <button class="filter-btn <%= currentCategory === 'lifestyle' ? 'active' : '' %>" data-filter="lifestyle">Lifestyle</button>
+                <button class="filter-btn <%= currentCategory === 'training' ? 'active' : '' %>" data-filter="training">Training</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid">
+                <% products.forEach(product => { %>
+                    <a href="/product/<%= product.id %>" class="product-card" data-category="<%= product.category.toLowerCase() %>">
+                        <img src="<%= product.images[0] || '/images/placeholder.png' %>" alt="<%= product.name %>" class="product-image floating">
+                        <div class="product-info">
+                            <h3 class="product-name"><%= product.name %></h3>
+                            <p class="product-category" style="font-size: 0.9rem; color: var(--nike-gray); margin-bottom: 0.5rem;">
+                                <%= product.category %>
+                            </p>
+                            <p class="product-price">$<%= product.price %></p>
+                        </div>
+                    </a>
+                <% }); %>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>NIKE</h3>
+                <p>Bring inspiration and innovation to every athlete* in the world.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form id="newsletter-form" class="newsletter-form">
+                    <input type="email" placeholder="Your email" required class="newsletter-input">
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nike, Inc. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

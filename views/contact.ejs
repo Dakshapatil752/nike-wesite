@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">NIKE</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <a href="/" class="nav-logo">NIKE</a>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main style="padding-top: 80px;">
+        <section class="hero" style="height: 40vh; background: var(--nike-black);">
+            <div class="hero-content">
+                <h1 class="hero-title" style="font-size: 4rem;">CONTACT US</h1>
+                <p class="hero-subtitle" style="letter-spacing: 5px;">WE'RE HERE TO HELP</p>
+            </div>
+        </section>
+
+        <section style="padding: 8rem 5%;">
+            <div class="contact-form">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" class="form-input" required>
+                        <label for="name" class="form-label">Your Name</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-input" required>
+                        <label for="email" class="form-label">Your Email</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" class="form-input form-textarea" required></textarea>
+                        <label for="message" class="form-label">Your Message</label>
+                    </div>
+                    
+                    <button type="submit" class="add-to-cart" style="margin-top: 1rem;">SEND MESSAGE</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact Info -->
+        <section style="padding: 4rem 5%; background: var(--nike-light-gray);">
+            <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem;">
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">📍</div>
+                    <h3 style="margin-bottom: 1rem;">Headquarters</h3>
+                    <p style="opacity: 0.8;">One Bowerman Drive<br>Beaverton, Oregon 97005</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">📞</div>
+                    <h3 style="margin-bottom: 1rem;">Phone</h3>
+                    <p style="opacity: 0.8;">1-800-344-6453<br>Mon-Fri, 7am-4pm PT</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">✉️</div>
+                    <h3 style="margin-bottom: 1rem;">Email</h3>
+                    <p style="opacity: 0.8;">support@nike.com<br>We respond within 24 hours</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>NIKE</h3>
+                <p>Bring inspiration and innovation to every athlete* in the world.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nike, Inc. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

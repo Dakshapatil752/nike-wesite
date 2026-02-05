@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">NIKE</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <a href="/" class="nav-logo">NIKE</a>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main style="padding-top: 80px;">
+        <section class="hero" style="height: 60vh; background: linear-gradient(135deg, var(--nike-black) 0%, #333 100%);">
+            <div class="hero-content">
+                <h1 class="hero-title" style="font-size: 6rem;">OUR STORY</h1>
+                <p class="hero-subtitle" style="letter-spacing: 5px;">SINCE 1971</p>
+            </div>
+        </section>
+
+        <!-- Mission -->
+        <section style="padding: 8rem 5%; text-align: center;">
+            <h2 style="font-size: 3rem; margin-bottom: 2rem; font-weight: 900;">OUR MISSION</h2>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.8; opacity: 0.8;">
+                To bring inspiration and innovation to every athlete* in the world. 
+                <span style="display: block; margin-top: 1rem; font-size: 1rem; opacity: 0.6;">
+                    *If you have a body, you are an athlete.
+                </span>
+            </p>
+        </section>
+
+        <!-- Timeline -->
+        <section style="padding: 4rem 5%; background: var(--nike-light-gray);">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">1971</div>
+                    <div class="timeline-content">
+                        <h3>The Beginning</h3>
+                        <p>Blue Ribbon Sports becomes Nike, named after the Greek goddess of victory.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1982</div>
+                    <div class="timeline-content">
+                        <h3>Air Force 1</h3>
+                        <p>The first basketball shoe with Nike Air cushioning revolutionizes the industry.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1985</div>
+                    <div class="timeline-content">
+                        <h3>Air Jordan</h3>
+                        <p>Michael Jordan signs with Nike, changing sports marketing forever.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1988</div>
+                    <div class="timeline-content">
+                        <h3>"Just Do It"</h3>
+                        <p>The iconic slogan launches, becoming a cultural phenomenon.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2000s</div>
+                    <div class="timeline-content">
+                        <h3>Global Expansion</h3>
+                        <p>Nike becomes the world's leading sports brand with innovations like Flyknit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values -->
+        <section style="padding: 8rem 5%;">
+            <h2 style="text-align: center; font-size: 3rem; margin-bottom: 4rem; font-weight: 900;">OUR VALUES</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; max-width: 1200px; margin: 0 auto;">
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🏃‍♂️</div>
+                    <h3 style="margin-bottom: 1rem;">Innovation</h3>
+                    <p style="opacity: 0.8;">Pushing the boundaries of what's possible in sport.</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🌍</div>
+                    <h3 style="margin-bottom: 1rem;">Sustainability</h3>
+                    <p style="opacity: 0.8;">Protecting the future of sport and our planet.</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🤝</div>
+                    <h3 style="margin-bottom: 1rem;">Community</h3>
+                    <p style="opacity: 0.8;">Bringing athletes together worldwide.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>NIKE</h3>
+                <p>Bring inspiration and innovation to every athlete* in the world.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Learn More</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nike, Inc. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
